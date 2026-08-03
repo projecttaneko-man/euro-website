@@ -1,0 +1,17 @@
+.about{ position:relative; background:#fff; padding-top:80px; padding-bottom:100px; overflow:hidden; }
+.about-shape{ position:absolute; top:0; right:0; width:55%; height:70px; background:linear-gradient(100deg,#c9cdd3 0%,#ececed 100%); clip-path:polygon(15% 0,100% 0,100% 100%,45% 0); z-index:1; }
+.about-text{ position:relative; z-index:2; max-width:900px; }
+.section-tag{ display:inline-block; color:#F4C61C; font-size:18px; font-weight:500; margin-bottom:16px; }
+.about-text h2{ font-size:2.75rem; font-weight:700; color:#222; line-height:1.25; margin-bottom:28px; }
+.about-text p{ font-size:18px; line-height:1.75; color:#666; margin-bottom:20px; }
+.about-highlight{ font-style:italic; font-weight:700; color:#444 !important; }
+
+@media(max-width:992px){
+  .about-text h2{ font-size:2.2rem; }
+}
+@media(max-width:768px){
+  .about{ padding-top:60px; padding-bottom:70px; }
+  .about-shape{ height:40px; }
+  .about-text h2{ font-size:1.9rem; }
+  .about-text p{ font-size:16px; }
+}

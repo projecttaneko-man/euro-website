@@ -1,0 +1,14 @@
+.genset{ background:#fff; padding:60px 0 100px; }
+.genset h2{ font-size:2rem; font-weight:800; color:#222; margin-bottom:10px; }
+.genset-lead{ font-size:16px; color:#777; margin-bottom:40px; }
+
+.genset-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
+.genset-logo{ display:flex; align-items:center; justify-content:center; height:110px; }
+.genset-logo img{ max-height:90px; width:auto; margin:0 auto; }
+
+@media(max-width:992px){
+  .genset-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:576px){
+  .genset-grid{ grid-template-columns:1fr; }
+}

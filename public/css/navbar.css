@@ -1,9 +1,7 @@
-header{ position:fixed; top:0; left:0; width:100%; z-index:999; background:#fff; box-shadow:0 3px 12px rgba(0,0,0,.06); }
-
-.topbar{ background:#2F2454; height:44px; }
-.topbar-container{ display:flex; justify-content:flex-end; align-items:center; height:44px; }
-.topbar-contact{ display:flex; gap:32px; }
-.topbar-contact a{ display:flex; align-items:center; gap:8px; color:#fff; font-size:14px; }
+.topbar{ background:#2F2454; height:45px; }
+.topbar-container{ display:flex; justify-content:flex-end; align-items:center; height:45px; }
+.topbar-contact{ display:flex; gap:35px; }
+.topbar-contact a{ display:flex; align-items:center; gap:10px; color:#fff; font-size:14px; }
 .topbar-contact i{ color:#f4c419; }
 
 .navbar{ height:86px; display:flex; align-items:center; }
@@ -11,13 +9,13 @@ header{ position:fixed; top:0; left:0; width:100%; z-index:999; background:#fff;
 
 .logo img{ width:130px; }
 
-.nav-menu{ display:flex; align-items:center; gap:38px; }
-.nav-menu li a{ color:#2F2454; font-weight:600; font-size:16px; transition:.3s; }
-.nav-menu li a:hover{ color:#f4c419; }
+.nav-menu{ display:flex; gap:42px; align-items:center; }
+.nav-menu a{ color:#2F2454; font-weight:600; font-size:16px; transition:.3s; }
+.nav-menu a:hover{ color:#f4c419; }
 
 .nav-right{ display:flex; align-items:center; gap:22px; }
 
-.language{ display:flex; align-items:center; gap:10px; font-size:15px; }
+.language{ display:flex; align-items:center; gap:8px; font-size:15px; }
 .language img{ width:20px; }
 .language a{ display:flex; align-items:center; gap:6px; color:#b9b3cc; font-weight:500; }
 .language a.active{ color:#2F2454; font-weight:700; }
