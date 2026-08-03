@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">EURO<strong>POWER</strong></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="/" class="<%= currentPath === '/' ? 'active' : '' %>">Beranda</a>
+      <a href="/layanan-kami" class="<%= currentPath.startsWith('/layanan-kami') ? 'active' : '' %>">Layanan Kami</a>
+      <a href="/produk" class="<%= currentPath.startsWith('/produk') ? 'active' : '' %>">Produk</a>
+      <a href="/layanan" class="<%= currentPath.startsWith('/layanan') && !currentPath.startsWith('/layanan-kami') ? 'active' : '' %>">Instalasi</a>
+      <a href="/tentang-kami" class="<%= currentPath.startsWith('/tentang-kami') ? 'active' : '' %>">Tentang Kami</a>
+      <a href="/artikel" class="<%= currentPath.startsWith('/artikel') ? 'active' : '' %>">Artikel</a>
+      <a href="/kontak" class="btn btn-accent nav-cta">Konsultasi</a>
+    </nav>
+  </div>
+</header>
