@@ -1,21 +1,40 @@
-<footer>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <img src="/images/Desain-tanpa-judul-5.webp" alt="EuroPower">
+            <p>Mitra Daya Cadangan untuk Bisnis Anda</p>
+            <ul class="footer-contact">
+                <li><i class="fa-brands fa-whatsapp"></i> <%= site.phoneDisplay %></li>
+                <li><i class="fa-solid fa-envelope"></i> <%= site.emailMarketing %></li>
+                <li><i class="fa-solid fa-location-dot"></i> <%= site.location %></li>
+            </ul>
+        </div>
 
-<div class="container">
+        <div class="footer-col">
+            <h4>Perusahaan</h4>
+            <a href="/layanan-kami">Solusi Kami</a>
+            <a href="/insight">Artikel &amp; Wawasan</a>
+            <a href="/layanan-kami#faq">FAQ</a>
+            <a href="<%= site.waLink %>" target="_blank" rel="noopener">Konsultasi</a>
+        </div>
 
-<img src="/images/logo.png">
+        <div class="footer-col">
+            <h4>Generator</h4>
+            <a href="/layanan-kami#fdl">FDL</a>
+            <a href="/layanan-kami#bogen">Bogen</a>
+            <a href="/layanan-kami#bremen">Bremen</a>
+            <a href="/layanan-kami#taneko">Taneko</a>
+        </div>
 
-<p>Backup Power Partner for Your Business</p>
+        <div class="footer-col">
+            <h4>Jam Operasional</h4>
+            <p><i class="fa-regular fa-clock"></i> <%= site.hours %></p>
+        </div>
+    </div>
 
-<ul>
-
-<li><%= site.phoneDisplay %></li>
-
-<li><%= site.emailMarketing %></li>
-
-<li><%= site.location %></li>
-
-</ul>
-
-</div>
-
+    <div class="footer-bottom">
+        <div class="container">
+            <span>&copy; <%= new Date().getFullYear() %> Euro Power. All right reserved.</span>
+        </div>
+    </div>
 </footer>
