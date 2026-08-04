@@ -24,11 +24,16 @@ app.locals.site = {
   hours: "Senin - Jumat, 08.00 - 17.00",
 };
 
+app.use((req, res, next) => {
+  res.locals.currentPath = req.path;
+  next();
+});
+
 const webRoutes = require("./routes/web");
 app.use("/", webRoutes);
 
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

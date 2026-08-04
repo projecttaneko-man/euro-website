@@ -1,0 +1,66 @@
+.genset-picker{ background:#f7f7f9; padding:90px 0; text-align:center; }
+.genset-picker-title{ font-size:2rem; font-weight:800; color:#2F2454; line-height:1.35; margin-bottom:16px; }
+.genset-picker-lead{ font-size:15px; color:#666; max-width:700px; margin:0 auto 40px; }
+
+.picker-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-bottom:50px; }
+
+.picker-card{
+  position:relative; display:block; aspect-ratio:37/44; border-radius:6px; overflow:hidden;
+  text-decoration:none; -webkit-tap-highlight-color:transparent;
+}
+
+.picker-bg{
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  transition:transform .4s ease;
+}
+.picker-card:hover .picker-bg,
+.picker-card.active .picker-bg,
+.picker-card:active .picker-bg{ transform:scale(1.08); }
+
+.picker-overlay{
+  position:absolute; inset:0;
+  background:rgba(20,20,26,.5);
+  transition:background .3s ease;
+}
+.picker-card:hover .picker-overlay,
+.picker-card.active .picker-overlay,
+.picker-card:active .picker-overlay{ background:rgba(20,20,26,.68); }
+
+.picker-corner{ position:absolute; width:90px; height:2px; background:rgba(255,255,255,.55); z-index:2; }
+.picker-corner-tr{ top:22px; right:-18px; transform:rotate(45deg); }
+.picker-corner-bl{ bottom:22px; left:-18px; transform:rotate(45deg); }
+
+.picker-content{
+  position:relative; z-index:3; height:100%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:20px; text-align:center;
+  transition:transform .3s ease;
+}
+.picker-card:hover .picker-content,
+.picker-card.active .picker-content,
+.picker-card:active .picker-content{ transform:translateY(-4px); }
+
+.picker-content h3{ color:#fff; font-size:1.8rem; font-weight:800; margin-bottom:12px; }
+.picker-content p{ color:#e8e8ec; font-size:14px; margin-bottom:18px; max-width:200px; line-height:1.5; }
+.picker-btn{
+  display:inline-block; border:1px solid #fff; color:#fff; font-size:11px; font-weight:700;
+  letter-spacing:.8px; padding:11px 20px; border-radius:2px; transition:.3s;
+}
+.picker-card:hover .picker-btn,
+.picker-card.active .picker-btn,
+.picker-card:active .picker-btn{ background:#F4C61C; border-color:#F4C61C; color:#2F2454; }
+
+.picker-summary h4{ font-size:1.2rem; font-weight:800; color:#2F2454; margin-bottom:20px; }
+.picker-checklist{ display:flex; flex-wrap:wrap; justify-content:center; gap:24px; }
+.picker-checklist li{ position:relative; padding-left:22px; font-size:14px; color:#444; }
+.picker-checklist li::before{ content:"✓"; position:absolute; left:0; color:#F4C61C; font-weight:700; }
+
+@media(max-width:992px){
+  .picker-grid{ grid-template-columns:repeat(2,1fr); }
+  .genset-picker-title{ font-size:1.6rem; }
+}
+@media(max-width:576px){
+  .picker-grid{ grid-template-columns:1fr; }
+  .picker-checklist{ flex-direction:column; gap:10px; align-items:flex-start; padding-left:20px; }
+}

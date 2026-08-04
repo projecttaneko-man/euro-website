@@ -10,26 +10,39 @@
 
     <nav class="navbar">
         <div class="container navbar-container">
-            <a href="/" class="logo">
-                <img src="/images/logo.png" alt="EuroPower">
-            </a>
-
-            <ul class="nav-menu">
-                <li><a href="#">Our Solution</a></li>
-                <li><a href="#">Insight</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-
-            <div class="nav-right">
-                <div class="language">
-                    <a href="#"><img src="/images/id.svg" alt="ID"> ID</a>
-                    <span>|</span>
-                    <a href="#" class="active"><img src="/images/en.svg" alt="EN"> EN</a>
-                </div>
-                <a href="#" class="btn-primary">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    Hubungi Kami
+            <div class="navbar-left">
+                <a href="/" class="logo">
+                    <img src="/images/logo.png" alt="EuroPower">
                 </a>
+
+                <ul class="nav-menu">
+                    <li><a href="/layanan-kami" class="<%= currentPath === '/layanan-kami' ? 'active' : '' %>">Solusi Kami</a></li>
+                    <li><a href="/insight" class="<%= currentPath === '/insight' ? 'active' : '' %>">Wawasan</a></li>
+                    <li><a href="/contact" class="<%= currentPath === '/contact' ? 'active' : '' %>">Kontak</a></li>
+                </ul>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-collapse" id="navCollapse">
+                <div class="nav-mobile-contact">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i> +62 851-9609-5855</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i> support@europower.co.id</a>
+                </div>
+
+                <div class="nav-right">
+                <div class="language">
+                    <a href="#" id="langId" class="active">ID</a>
+                    <span>|</span>
+                    <a href="#" id="langEn">EN</a>
+                </div>
+                    <a href="<%= site.waLink %>" target="_blank" rel="noopener" class="btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Hubungi Kami
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
