@@ -33,6 +33,15 @@ header{ position:fixed; top:0; left:0; width:100%; z-index:999; background:#fff;
 .language a.active{ color:#2F2454; font-weight:700; }
 .language span{ color:#ccc; }
 
+.language a{ position:relative; display:flex; align-items:center; gap:5px; color:#8a8a94; font-weight:500; }
+.language a.active{ color:#2F2454; font-weight:700; }
+.language a.active::after{
+  content:"✓";
+  font-size:11px;
+  color:#F4C61C;
+  margin-left:2px;
+}
+
 .btn-primary{ display:flex; align-items:center; gap:8px; background:#f4c419; color:#2F2454; padding:14px 26px; border-radius:4px; font-weight:700; text-transform:uppercase; font-size:14px; white-space:nowrap; transition:.3s; }
 .btn-primary:hover{ background:#ffd84d; }
 
@@ -75,3 +84,8 @@ header{ position:fixed; top:0; left:0; width:100%; z-index:999; background:#fff;
   .nav-right{ flex-direction:column; align-items:flex-start; gap:16px; width:100%; padding:16px 0 24px; }
   .btn-primary{ width:100%; justify-content:center; }
 }
+
+
+.goog-te-banner-frame{ display:none !important; }
+body{ top:0 !important; position:static !important; }
+.skiptranslate{ display:none !important; }
