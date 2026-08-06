@@ -25,4 +25,14 @@ router.get("/contact", (req, res) => {
   });
 });
 
+router.get("/contact", (req, res) => {
+  res.render("pages/contact", { title: "Hubungi Kami – Euro Power" });
+});
+
+router.post("/contact", (req, res) => {
+  const { firstName, lastName, email, subject, message } = req.body;
+  console.log("Pesan baru dari:", { firstName, lastName, email, subject, message });
+  res.redirect("/contact?success=1");
+});
+
 module.exports = router;

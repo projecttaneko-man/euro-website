@@ -1,0 +1,27 @@
+<section class="contact-section">
+    <div class="container contact-grid">
+        <div class="contact-info">
+            <h2>Kontak Kami</h2>
+            <p>Ceritakan kebutuhan Anda. Kami respons dalam 1x24 jam.</p>
+
+            <ul class="contact-info-list">
+                <li><i class="fa-brands fa-whatsapp"></i> <%= site.phoneDisplay %></li>
+                <li><i class="fa-solid fa-envelope"></i> <%= site.emailSupport %></li>
+                <li><i class="fa-solid fa-location-dot"></i> <%= site.location %></li>
+            </ul>
+        </div>
+
+        <div class="contact-form-card">
+            <form action="/contact" method="POST" class="contact-form">
+                <div class="form-row">
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                </div>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Submit Form</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ================== GOOGLE TRANSLATE ==================
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     { pageLanguage: 'id', includedLanguages: 'en', autoDisplay: false },
@@ -42,11 +41,26 @@ function googleTranslateElementInit() {
   );
 }
 
+function setActiveLangUI(lang) {
+  const langEn = document.getElementById("langEn");
+  const langId = document.getElementById("langId");
+  if (!langEn || !langId) return;
+
+  if (lang === "en") {
+    langEn.classList.add("active");
+    langId.classList.remove("active");
+  } else {
+    langId.classList.add("active");
+    langEn.classList.remove("active");
+  }
+}
+
 function setGoogleLang(lang) {
   const select = document.querySelector(".goog-te-combo");
   if (select) {
     select.value = lang;
     select.dispatchEvent(new Event("change"));
+    setActiveLangUI(lang);
   } else {
     setTimeout(function () { setGoogleLang(lang); }, 300);
   }
@@ -75,7 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   if (document.cookie.includes("googtrans=/id/en")) {
-    langEn?.classList.add("active");
-    langId?.classList.remove("active");
+    setActiveLangUI("en");
+  } else {
+    setActiveLangUI("id");
   }
 });

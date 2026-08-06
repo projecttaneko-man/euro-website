@@ -17,7 +17,7 @@
 
                 <ul class="nav-menu">
                     <li><a href="/layanan-kami" class="<%= currentPath === '/layanan-kami' ? 'active' : '' %>">Solusi Kami</a></li>
-                    <li><a href="/insight" class="<%= currentPath === '/insight' ? 'active' : '' %>">Wawasan</a></li>
+                    <li><a href="#" class="<%= currentPath === '/insight' ? 'active' : '' %>">Wawasan</a></li>
                     <li><a href="/contact" class="<%= currentPath === '/contact' ? 'active' : '' %>">Kontak</a></li>
                 </ul>
             </div>
@@ -33,11 +33,17 @@
                 </div>
 
                 <div class="nav-right">
-                <div class="language">
-                    <a href="#" id="langId" class="active">ID</a>
-                    <span>|</span>
-                    <a href="#" id="langEn">EN</a>
-                </div>
+                    <div class="language">
+                        <a href="#" id="langId" class="active">
+                            <img src="/images/id.jpeg" alt="ID" class="flag-img">
+                            <span>ID</span>
+                        </a>
+                        <span class="divider">|</span>
+                        <a href="#" id="langEn">
+                            <img src="/images/en.jpeg" alt="EN" class="flag-img">
+                            <span>EN</span>
+                        </a>
+                    </div>
                     <a href="<%= site.waLink %>" target="_blank" rel="noopener" class="btn-primary">
                         <i class="fa-brands fa-whatsapp"></i>
                         Hubungi Kami
@@ -47,3 +53,6 @@
         </div>
     </nav>
 </header>
+
+<div id="google_translate_element" style="display:none;"></div>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

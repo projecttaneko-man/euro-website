@@ -1,0 +1,54 @@
+.contact-hero{ min-height:280px; }
+
+.contact-section{ background:#fff; padding:80px 0; }
+.contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:60px; align-items:start; }
+
+.contact-info h2{ font-size:2.2rem; font-weight:800; color:#2F2454; margin-bottom:16px; }
+.contact-info p{ font-size:15px; color:#666; margin-bottom:24px; }
+
+.contact-info-list{ display:flex; flex-direction:column; gap:16px; }
+.contact-info-list li{ display:flex; align-items:center; gap:12px; font-size:15px; color:#333; }
+.contact-info-list i{ color:#F4C61C; font-size:16px; width:20px; text-align:center; }
+
+.contact-form-card{ background:#fff; border:1px solid #eee; border-radius:10px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,.04); }
+.contact-form{ display:flex; flex-direction:column; gap:16px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+
+.contact-form input,
+.contact-form textarea{
+  width:100%; font-family:"Plus Jakarta Sans", sans-serif; font-size:14px;
+  padding:14px 16px; border:1px solid #ddd; border-radius:6px; color:#333;
+  transition:.2s;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{ color:#999; }
+.contact-form input:focus,
+.contact-form textarea:focus{ outline:none; border-color:#F4C61C; }
+.contact-form textarea{ resize:vertical; }
+
+.contact-form .btn-primary{ align-self:flex-start; border:none; cursor:pointer; text-transform:none; font-size:15px; padding:14px 30px; }
+
+@media(max-width:900px){
+  .contact-grid{ grid-template-columns:1fr; gap:36px; }
+  .form-row{ grid-template-columns:1fr; }
+  .contact-form-card{ padding:24px; }
+}
+
+/* OFFICES */
+.offices{ background:#F1EEF7; padding:70px 0; }
+.offices h2{ font-size:2rem; font-weight:800; color:#2F2454; margin-bottom:32px; }
+
+.offices-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.office-card{ background:#fff; border:1px solid #e5e2ee; border-radius:8px; padding:24px; }
+.office-card h3{ font-size:1.15rem; font-weight:700; color:#222; margin-bottom:10px; }
+.office-card p{ font-size:14px; color:#777; line-height:1.6; margin-bottom:8px; }
+.office-phone{ color:#666 !important; font-weight:600; }
+
+.contact-hero{
+  min-height:280px;
+  background-image:url("/images/contact-hero.jpg") !important;
+}
+
+@media(max-width:900px){
+  .offices-grid{ grid-template-columns:1fr; }
+}
