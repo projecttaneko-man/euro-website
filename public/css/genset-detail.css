@@ -43,11 +43,9 @@
 }
 .genset-highlight-box h4{ color:#fff; font-size:15.5px; font-weight:700; margin-bottom:8px; }
 .genset-highlight-box p{ color:#c9c5d8; font-size:13.5px; line-height:1.65; margin:0; }
-
 .genset-detail-side{ /* static */ }
 .genset-detail-image{ margin-bottom:20px; }
 .genset-detail-image img{ border-radius:8px; width:100%; display:block; }
-
 .genset-detail-side .genset-subheading{ margin-top:0; text-transform:none; font-size:1.15rem; letter-spacing:normal; }
 .genset-detail-side .check-list{ display:flex; flex-direction:column; gap:7px; }
 .genset-detail-side .check-list li{ position:relative; padding-left:22px; font-size:13.5px; color:#555; line-height:1.5; }
