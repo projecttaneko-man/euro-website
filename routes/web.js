@@ -21,16 +21,26 @@ router.get("/insight", (req, res) => {
 
 router.get("/contact", (req, res) => {
   res.render("pages/contact", {
-    title: "Contact – Euro Power",
+    title: "Hubungi Kami – Euro Power",
+    success: req.query.success === "1",
   });
 });
 
-router.get("/contact", (req, res) => {
-  res.render("pages/contact", { title: "Hubungi Kami – Euro Power" });
-});
-
 router.post("/contact", (req, res) => {
-  const { firstName, lastName, email, subject, message } = req.body;
+  const firstName = (req.body.firstName || "").trim();
+  const lastName = (req.body.lastName || "").trim();
+  const email = (req.body.email || "").trim();
+  const subject = (req.body.subject || "").trim();
+  const message = (req.body.message || "").trim();
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!firstName || !lastName || !email || !message || !emailPattern.test(email)) {
+    return res.status(400).render("pages/contact", {
+      title: "Hubungi Kami – Euro Power",
+      error: "Mohon lengkapi semua kolom wajib dengan benar.",
+    });
+  }
+
   console.log("Pesan baru dari:", { firstName, lastName, email, subject, message });
   res.redirect("/contact?success=1");
 });
