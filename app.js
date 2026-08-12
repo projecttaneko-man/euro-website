@@ -41,6 +41,7 @@ app.use(
           "https://*.googleadservices.com",
           "https://*.gstatic.com",
           "https://*.googleapis.com",
+          "https://vizor.taneko.co.id",
         ],
         connectSrc: [
           "'self'",
