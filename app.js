@@ -20,6 +20,7 @@ app.use(
           "https://*.doubleclick.net",
           "https://*.googleadservices.com",
           "https://*.gstatic.com",
+          "https://vizor.taneko.co.id",
         ],
         styleSrc: [
           "'self'",
@@ -50,6 +51,7 @@ app.use(
           "https://*.doubleclick.net",
           "https://*.googleadservices.com",
           "https://*.gstatic.com",
+          "https://vizor.taneko.co.id",
         ],
         frameSrc: [
           "'self'",
