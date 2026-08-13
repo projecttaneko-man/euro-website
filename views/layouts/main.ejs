@@ -3,9 +3,18 @@
 
 <head>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5JP7WTTH');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +41,21 @@
     <link rel="stylesheet" href="/css/projects.css">
     <link rel="stylesheet" href="/css/contact.css">
 
+    <!-- Vizor AI Tracking SDK -->
+    <script>
+      window.CLICKGUARD_ENDPOINT = 'https://vizor.taneko.co.id/api/events';
+      window.CLICKGUARD_SITE_ID = 'euro-001';
+    </script>
+    <script src="https://vizor.taneko.co.id/clickguard.js?v=6"></script>
+
 </head>
 
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JP7WTTH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <%- body %>
 
@@ -47,6 +68,14 @@
     <script src="/js/projects.js"></script>
 
     <!-- Google Translate -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: "id", includedLanguages: "en,id" },
+                "google_translate_element"
+            );
+        }
+    </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>

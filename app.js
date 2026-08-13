@@ -1,9 +1,72 @@
 const express = require("express");
 const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
+const helmet = require("helmet");
 
 const app = express();
 
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'",
+          "https://*.google.com",
+          "https://*.googleapis.com",
+          "https://*.googletagmanager.com",
+          "https://*.doubleclick.net",
+          "https://*.googleadservices.com",
+          "https://*.gstatic.com",
+          "https://vizor.taneko.co.id",
+        ],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://fonts.googleapis.com",
+          "https://cdnjs.cloudflare.com",
+          "https://*.gstatic.com",
+          "https://*.googleapis.com",
+        ],
+        fontSrc: ["'self'", "https://fonts.gstatic.com", "https://*.gstatic.com", "https://*.googleapis.com", "https://cdnjs.cloudflare.com"],
+        imgSrc: [
+          "'self'",
+          "data:",
+          "https://*.googletagmanager.com",
+          "https://*.google.com",
+          "https://*.google.co.id",
+          "https://*.doubleclick.net",
+          "https://*.googleadservices.com",
+          "https://*.gstatic.com",
+          "https://*.googleapis.com",
+          "https://vizor.taneko.co.id",
+        ],
+        connectSrc: [
+          "'self'",
+          "https://*.google.com",
+          "https://*.googleapis.com",
+          "https://*.google-analytics.com",
+          "https://*.googletagmanager.com",
+          "https://*.doubleclick.net",
+          "https://*.googleadservices.com",
+          "https://*.gstatic.com",
+          "https://vizor.taneko.co.id",
+        ],
+        frameSrc: [
+          "'self'",
+          "https://*.google.com",
+          "https://*.googleapis.com",
+          "https://*.googletagmanager.com",
+          "https://*.doubleclick.net",
+        ],
+      },
+    },
+  })
+);
+
+app.get("/favicon.ico", (req, res) => res.sendFile(path.join(__dirname, "public/images/logo.png")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

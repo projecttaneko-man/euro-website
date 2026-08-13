@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".projects-tab");
   const panels = document.querySelectorAll(".projects-panel");
+  if (!panels || panels.length === 0) return;
+
   const autoplayTimers = {};
 
   tabs.forEach(function (tab) {
@@ -10,16 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       tab.classList.add("active");
       const panel = document.querySelector('.projects-panel[data-panel="' + tab.dataset.tab + '"]');
-      panel.classList.add("active");
-
-      initDots(panel);
-      startAutoplay(panel);
+      if (panel) {
+        panel.classList.add("active");
+        initDots(panel);
+        startAutoplay(panel);
+      }
     });
   });
 
   function initDots(panel) {
+    if (!panel) return;
     const track = panel.querySelector(".projects-track");
     const dotsWrap = panel.querySelector("[data-slide-dots]");
+    if (!track || !dotsWrap) return;
     const cards = track.querySelectorAll(".project-card");
 
     dotsWrap.innerHTML = "";
@@ -153,6 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const firstPanel = document.querySelector('.projects-panel.active');
-  initDots(firstPanel);
-  startAutoplay(firstPanel);
+  if (firstPanel) {
+    initDots(firstPanel);
+    startAutoplay(firstPanel);
+  }
 });

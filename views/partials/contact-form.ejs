@@ -12,6 +12,12 @@
         </div>
 
         <div class="contact-form-card">
+            <% if (typeof error !== "undefined" && error) { %>
+                <p class="form-error"><%= error %></p>
+            <% } %>
+            <% if (typeof success !== "undefined" && success) { %>
+                <p class="form-success">Pesan Anda berhasil dikirim. Terima kasih!</p>
+            <% } %>
             <form action="/contact" method="POST" class="contact-form">
                 <div class="form-row">
                     <input type="text" name="firstName" placeholder="First Name" required>

@@ -11,6 +11,8 @@
 .contact-info-list i{ color:#F4C61C; font-size:16px; width:20px; text-align:center; }
 
 .contact-form-card{ background:#fff; border:1px solid #eee; border-radius:10px; padding:36px; box-shadow:0 10px 30px rgba(0,0,0,.04); }
+.form-error{ background:#fdecea; color:#b3261e; border:1px solid #f5c2c0; border-radius:6px; padding:12px 16px; margin-bottom:16px; font-size:14px; }
+.form-success{ background:#eaf7ec; color:#1e7a34; border:1px solid #bfe6c6; border-radius:6px; padding:12px 16px; margin-bottom:16px; font-size:14px; }
 .contact-form{ display:flex; flex-direction:column; gap:16px; }
 .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 
