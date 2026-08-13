@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   items.forEach(function (el, i) {
     el.classList.add('reveal-auto');
-    el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    el.style.transitionDelay = (i % 4) * 0.15 + 's';
   });
 
   var observer = new IntersectionObserver(function (entries) {

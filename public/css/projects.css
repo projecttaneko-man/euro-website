@@ -57,8 +57,8 @@
 .slider-dots span{ width:6px; height:6px; border-radius:50%; background:#d8d8dc; cursor:pointer; transition:.2s; flex-shrink:0; }
 .slider-dots span.active{ width:8px; height:8px; background:#1a1a1a; }
 
-.project-card img{ transition: transform .35s ease; }
-.project-card:hover img{ transform: scale(1.05); }
+.project-card img{ transition: transform .5s ease; }
+.project-card:hover img{ transform: scale(1.12); }
 
 @media(max-width:992px){
   .project-card{ flex:0 0 calc(50% - 10px); }

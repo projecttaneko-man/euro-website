@@ -50,16 +50,26 @@ section, .section { position: relative; width: 100%; padding: 100px 0; }
 }
 .reveal-auto{
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .6s ease, transform .6s ease;
+  transform: translateY(60px) scale(0.96);
+  transition: opacity .9s cubic-bezier(.16,.8,.24,1), transform .9s cubic-bezier(.16,.8,.24,1);
 }
 .reveal-auto.reveal-visible{
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-body{ animation: pageFadeIn .5s ease; }
+body{ animation: pageFadeIn .7s ease; }
 @keyframes pageFadeIn{
   from{ opacity: 0; }
   to{ opacity: 1; }
+}
+
+.reveal-hero{
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroReveal 1s cubic-bezier(.16,.8,.24,1) forwards;
+}
+@keyframes heroReveal{
+  from{ opacity: 0; transform: translateY(40px); }
+  to{ opacity: 1; transform: translateY(0); }
 }

@@ -16,7 +16,7 @@
 }
 .picker-card:hover .picker-bg,
 .picker-card.active .picker-bg,
-.picker-card:active .picker-bg{ transform:scale(1.08); }
+.picker-card:active .picker-bg{ transform:scale(1.15); }
 
 .picker-overlay{
   position:absolute; inset:0;

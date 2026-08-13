@@ -5,9 +5,7 @@
 
 .services-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:left; }
 .service-card{ border:1px solid #eee; border-radius:6px; padding:28px 24px; transition:.3s; }
-.service-card:hover{ border-color:#F4C61C; box-shadow:0 8px 24px rgba(0,0,0,.05); transform:translateY(-3px); }
-
-.service-icon{ margin-bottom:20px; }
+.service-card:hover{ border-color:#F4C61C; box-shadow:0 16px 36px rgba(0,0,0,.12); transform:translateY(-8px) scale(1.02);}.service-icon{ margin-bottom:20px; }
 .service-icon img{ width:70px; height:70px; object-fit:contain; }
 
 .service-card h3{ font-size:1.05rem; font-weight:700; color:#222; margin-bottom:10px; }
