@@ -16,6 +16,10 @@
 .timeline p{ font-size:15px; line-height:1.65; color:#777; }
 
 .support-footnote{ font-size:15px; line-height:1.7; color:#555; }
+.support-image img{ transition: transform .4s ease; }
+.support-image:hover img{ transform: scale(1.03); }
+.timeline li{ transition: transform .25s ease; }
+.timeline li:hover{ transform: translateX(6px); }
 
 @media(max-width:992px){
   .support-container{ grid-template-columns:1fr; gap:40px; }

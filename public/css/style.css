@@ -48,3 +48,18 @@ section, .section { position: relative; width: 100%; padding: 100px 0; }
   .section-title { font-size: 26px; }
   .section-description { font-size: 15px; }
 }
+.reveal-auto{
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal-auto.reveal-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body{ animation: pageFadeIn .5s ease; }
+@keyframes pageFadeIn{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}

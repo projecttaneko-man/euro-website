@@ -84,3 +84,7 @@ header{ position:fixed; top:0; left:0; width:100%; z-index:999; background:#fff;
 .goog-te-banner-frame{ display:none !important; }
 body{ top:0 !important; position:static !important; }
 .skiptranslate{ display:none !important; }
+
+header{ transition: box-shadow .3s ease, height .3s ease; }
+header.scrolled{ box-shadow: 0 4px 16px rgba(0,0,0,.1); }
+header.scrolled .navbar{ height: 70px; }

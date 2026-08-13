@@ -39,6 +39,9 @@
 .faq-image-col{ position:sticky; top:110px; text-align:center; }
 .faq-image-col img{ max-width:100%; margin:0 auto; }
 
+.faq-item{ transition: background .25s ease, transform .25s ease; }
+.faq-item:hover{ transform: translateX(4px); }
+
 @media(max-width:992px){
   .faq-grid{ grid-template-columns:1fr; gap:32px; }
   .faq-image-col{ display:none; }
