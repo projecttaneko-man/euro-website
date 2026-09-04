@@ -79,6 +79,8 @@ app.use(expressLayouts);
 app.set("layout", "layouts/main");
 
 app.locals.site = {
+  name: "EuroPower Indonesia",
+  url: "https://europower.co.id",
   phoneDisplay: "+62 851-9609-5855",
   emailMarketing: "marketing@europower.co.id",
   emailSupport: "support@europower.co.id",

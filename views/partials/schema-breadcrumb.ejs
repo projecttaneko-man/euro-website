@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        <% breadcrumb.forEach(function(b, i) { %>
+        {
+            "@type": "ListItem",
+            "position": <%= i + 1 %>,
+            "name": <%- JSON.stringify(b.name) %>,
+            "item": "<%= site.url %><%= b.path %>"
+        }<%= i < breadcrumb.length - 1 ? "," : "" %>
+        <% }); %>
+    ]
+}
+</script>
