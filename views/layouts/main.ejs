@@ -48,6 +48,49 @@
     </script>
     <script src="https://vizor.taneko.co.id/clickguard.js?v=6"></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18419727429"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18419727429');
+    </script>
+
+    <!-- Structured Data: Organization + LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "<%= site.url %>/#business",
+      "name": "<%= site.name %>",
+      "url": "<%= site.url %>",
+      "image": "<%= site.url %>/images/logo.png",
+      "logo": "<%= site.url %>/images/logo.png",
+      "description": "Agen genset diesel bermesin Cummins & Perkins di Semarang. Menyediakan penjualan, instalasi, service, dan maintenance genset untuk kebutuhan residential hingga industrial.",
+      "telephone": "<%= site.phoneDisplay %>",
+      "email": "<%= site.emailMarketing %>",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Semarang",
+        "addressRegion": "Jawa Tengah",
+        "addressCountry": "ID"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Indonesia"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }],
+      "sameAs": ["<%= site.waLink %>"]
+    }
+    </script>
 </head>
 
 <body>

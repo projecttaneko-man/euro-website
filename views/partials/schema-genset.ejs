@@ -1,0 +1,79 @@
+<%
+    const gensetSeries = [
+        {
+            id: "fdl",
+            name: "Genset FDL",
+            tagline: "Smart Backup Power",
+            image: "genset-fdl.webp",
+            description: "FDL adalah solusi backup power standby yang praktis dan efisien untuk kebutuhan operasional. Tersedia 950VA-1.500kVA Portable Residential dan 15-1.375kVA Industrial Series, Open & Silent Type, serta ATS Compatible pada Industrial Series.",
+            category: "Genset Diesel"
+        },
+        {
+            id: "bogen",
+            name: "Genset BOGEN",
+            tagline: "Dependable Business Power",
+            image: "genset-bogen.webp",
+            description: "BOGEN dirancang untuk bisnis yang bergantung pada kontinuitas listrik. Tersedia 15-1.000kVA Industrial Series, Open & Silent Type, dan ATS Compatible.",
+            category: "Genset Diesel"
+        },
+        {
+            id: "bremen",
+            name: "Genset BREMEN",
+            tagline: "Engineered For Heavy Duty",
+            image: "genset-bremen.webp",
+            description: "BREMEN dibangun untuk kebutuhan operasional berat dan penggunaan intensif. Tersedia 40-2.000kVA Industrial Series, Open & Silent Type, dan ATS Compatible.",
+            category: "Genset Diesel"
+        },
+        {
+            id: "taneko",
+            name: "Genset TANEKO",
+            tagline: "Premium Industrial Power",
+            image: "genset-taneko.webp",
+            description: "TANEKO menghadirkan standar performa, keandalan, dan durabilitas premium untuk operasional tanpa toleransi gangguan listrik. Tersedia 15-3.350kVA Industrial Series, Open & Silent Type, dan ATS Compatible.",
+            category: "Genset Diesel"
+        }
+    ];
+%>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        <% gensetSeries.forEach(function(g, i) { %>
+        {
+            "@type": "Product",
+            "@id": "<%= site.url %>/layanan-kami#<%= g.id %>",
+            "name": <%- JSON.stringify(g.name) %>,
+            "image": "<%= site.url %>/images/<%= g.image %>",
+            "description": <%- JSON.stringify(g.description) %>,
+            "category": <%- JSON.stringify(g.category) %>,
+            "slogan": <%- JSON.stringify(g.tagline) %>,
+            "brand": {
+                "@type": "Brand",
+                "name": "<%= g.name.replace('Genset ', '') %>"
+            },
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "<%= site.name %>"
+            },
+            "additionalProperty": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "Engine Brand",
+                    "value": "Cummins, Perkins"
+                }
+            ],
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "IDR",
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "<%= site.name %>"
+                },
+                "url": "<%= site.url %>/layanan-kami#<%= g.id %>"
+            }
+        }<%= i < gensetSeries.length - 1 ? "," : "" %>
+        <% }); %>
+    ]
+}
+</script>

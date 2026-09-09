@@ -3,25 +3,25 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   res.render("pages/home", {
-    title: "EuroPower Indonesia",
+    title: "EuroPower Indonesia - Agen Genset Cummins & Perkins",
   });
 });
 
 router.get("/layanan-kami", (req, res) => {
   res.render("pages/layanan-kami", {
-    title: "Layanan Kami – Euro Power",
+    title: "Layanan Kami – Euro Power | Agen Genset Cummins & Perkins",
   });
 });
 
 router.get("/insight", (req, res) => {
   res.render("pages/insight", {
-    title: "Insight – Euro Power",
+    title: "Insight – Euro Power | Agen Genset Cummins & Perkins",
   });
 });
 
 router.get("/contact", (req, res) => {
   res.render("pages/contact", {
-    title: "Hubungi Kami – Euro Power",
+    title: "Hubungi Kami – Euro Power | Agen Genset Cummins & Perkins",
     success: req.query.success === "1",
   });
 });
@@ -36,7 +36,7 @@ router.post("/contact", (req, res) => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!firstName || !lastName || !email || !message || !emailPattern.test(email)) {
     return res.status(400).render("pages/contact", {
-      title: "Hubungi Kami – Euro Power",
+      title: "Hubungi Kami – Euro Power | Agen Genset Cummins & Perkins",
       error: "Mohon lengkapi semua kolom wajib dengan benar.",
     });
   }
